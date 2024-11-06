@@ -1,10 +1,9 @@
-public class GeometricObject {
+public abstract class GeometricObject {
     private String color = "white";
     private boolean filled;
 
     public GeometricObject() {
     }
-
 
     public GeometricObject(String color, boolean filled) {
         this.color = color;
@@ -30,5 +29,10 @@ public class GeometricObject {
     @Override
     public String toString() {
         return "color: " + color + " and filled: " + filled;
+    }
+
+    // This method can be implemented in subclasses that have an area calculation
+    public double getArea() {
+        throw new UnsupportedOperationException("getArea() is not supported for all GeometricObjects");
     }
 }
