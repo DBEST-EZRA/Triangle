@@ -29,4 +29,4 @@ This repository contains Java code implementations for various programming exerc
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/java-assignment.git
+git clone https://github.com/DBEST-EZRA/Triangle.git
