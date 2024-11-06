@@ -14,14 +14,20 @@ public class TestTriangle {
         System.out.print("Is the triangle filled (true/false)? ");
         boolean filled = input.nextBoolean();
 
-        Triangle triangle = new Triangle(side1, side2, side3);
-        triangle.setColor(color);
-        triangle.setFilled(filled);
+        try{
+            Triangle triangle = new Triangle(side1, side2, side3);
+            triangle.setColor(color);
+            triangle.setFilled(filled);
 
-        System.out.println(triangle.toString());
-        System.out.println("Triangle Area: " + triangle.getArea());
-        System.out.println("Triangle Perimeter: " + triangle.getPerimeter());
-        System.out.println("Triangle Color: " + triangle.getColor());
-        System.out.println("Filled: " + triangle.isFilled());
+            System.out.println(triangle.toString());
+            System.out.println("Triangle Area: " + triangle.getArea());
+            System.out.println("Triangle Perimeter: " + triangle.getPerimeter());
+            System.out.println("Triangle Color: " + triangle.getColor());
+            System.out.println("Filled: " + triangle.isFilled());
+
+        } catch (IllegalTriangleException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
